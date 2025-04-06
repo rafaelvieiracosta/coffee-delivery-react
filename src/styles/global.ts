@@ -13,4 +13,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     -webkit-font-smoothing: antialiased;
   }
+
+  .row {
+    max-width: 72rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
 `;
