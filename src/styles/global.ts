@@ -2,7 +2,10 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    font-family: "Roboto", sans-serif;
+    --font_family_primary: "Roboto", sans-serif;
+    --font_family_secondary: "Baloo 2", sans-serif;
+
+    font-family: var(--font_family_primary);
   }
 
   :focus-visible:not(input) {

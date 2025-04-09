@@ -1,9 +1,9 @@
+import { HeroSection } from "./components/HeroSection";
+
 export function Home() {
   return (
     <main>
-      <div className="row">
-        <h1>Home</h1>
-      </div>
+      <HeroSection />
     </main>
   );
 }
