@@ -1,18 +1,28 @@
 import {
+  HeroSectionWrapper,
   HeroContainer,
   HeroImageWrapper,
   HeroInformation,
   HeroTitle,
   HeroDescription,
+  HeroList,
+  HeroListItem,
+  HeroListItemIcon,
 } from "./styles";
+
+import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
 import imageHeroSection from "../../../../assets/img/image-hero-section-home.png";
 
 export function HeroSection() {
   return (
-    <section>
+    <HeroSectionWrapper>
       <div className="row">
         <HeroContainer>
+          <HeroImageWrapper>
+            <img src={imageHeroSection} alt="" width={476} height={360} />
+          </HeroImageWrapper>
+
           <HeroInformation>
             <HeroTitle>
               Encontre o café perfeito para qualquer hora do dia
@@ -23,19 +33,38 @@ export function HeroSection() {
               qualquer hora
             </HeroDescription>
 
-            <ul>
-              <li>Compra simples e segura</li>
-              <li>Embalagem mantém o café intacto</li>
-              <li>Entrega rápida e rastreada</li>
-              <li>O café chega fresquinho até você</li>
-            </ul>
-          </HeroInformation>
+            <HeroList>
+              <HeroListItem>
+                <HeroListItemIcon $iconColor="yellowDark">
+                  <ShoppingCart size={16} weight="fill" />
+                </HeroListItemIcon>
+                Compra simples e segura
+              </HeroListItem>
 
-          <HeroImageWrapper>
-            <img src={imageHeroSection} alt="" width={476} height={360} />
-          </HeroImageWrapper>
+              <HeroListItem>
+                <HeroListItemIcon $iconColor="gray">
+                  <Package size={16} weight="fill" />
+                </HeroListItemIcon>
+                Embalagem mantém o café intacto
+              </HeroListItem>
+
+              <HeroListItem>
+                <HeroListItemIcon $iconColor="yellow">
+                  <Timer size={16} weight="fill" />
+                </HeroListItemIcon>
+                Entrega rápida e rastreada
+              </HeroListItem>
+
+              <HeroListItem>
+                <HeroListItemIcon $iconColor="purple">
+                  <Coffee size={16} weight="fill" />
+                </HeroListItemIcon>
+                O café chega fresquinho até você
+              </HeroListItem>
+            </HeroList>
+          </HeroInformation>
         </HeroContainer>
       </div>
-    </section>
+    </HeroSectionWrapper>
   );
 }
