@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const ProductCardContainer = styled.div``;
-
+export const ProductCardContainer = styled.div`
+  padding-top: 20px;
+`;
 export const ProductCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,9 +15,30 @@ export const ProductCardWrapper = styled.div`
 `;
 
 export const ProductCardHeader = styled.div``;
-export const ProductCardImage = styled.div``;
-export const ProductCardTags = styled.ul``;
-export const ProductCardTag = styled.li``;
+export const ProductCardImage = styled.img`
+  margin-top: -40px;
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+  margin-right: auto;
+`;
+export const ProductCardTags = styled.ul`
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+`;
+export const ProductCardTag = styled.li`
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+  width: fit-content;
+  color: ${(props) => props.theme.brand_yellow_dark};
+  background-color: ${(props) => props.theme.brand_yellow_light};
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+`;
 export const ProductCardName = styled.p`
   margin-top: 1rem;
   font-family: var(--font_family_secondary);

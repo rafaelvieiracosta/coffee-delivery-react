@@ -16,17 +16,23 @@ import {
   ProductCardButton,
 } from "./styles";
 
+import coffeeImageTest from "../../assets/img/coffees/americano.png";
+
 export function ProductCard() {
   return (
     <ProductCardContainer>
       <ProductCardWrapper>
         <ProductCardHeader>
-          <ProductCardImage>
-            <img src="" alt="" />
-          </ProductCardImage>
+          <ProductCardImage
+            src={coffeeImageTest}
+            alt=""
+            width={120}
+            height={120}
+          />
 
           <ProductCardTags>
             <ProductCardTag>Tradicional</ProductCardTag>
+            <ProductCardTag>Com Leite</ProductCardTag>
           </ProductCardTags>
 
           <ProductCardName>Expresso Tradicional</ProductCardName>
