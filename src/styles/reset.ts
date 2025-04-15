@@ -14,6 +14,13 @@ export const ResetStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: none;
+  }
+
+  input {
+    border: none;
+    background: transparent;
+    outline: none;
   }
 
   ul {

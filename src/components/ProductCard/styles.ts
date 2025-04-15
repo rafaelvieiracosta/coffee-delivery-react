@@ -84,6 +84,18 @@ export const ProductCardPriceNumber = styled.span`
 export const ProductCardFastBuy = styled.div`
   display: flex;
   gap: 0.5rem;
+  max-width: 118px;
 `;
 export const ProductCardInput = styled.input``;
-export const ProductCardButton = styled.button``;
+export const ProductCardButton = styled.button`
+  border-radius: 6px;
+  padding: 8px;
+  background-color: ${(props) => props.theme.brand_purple_dark};
+  color: ${(props) => props.theme.base_card};
+  position: relative;
+  transition: background-color 150ms;
+
+  &:hover {
+    background-color: ${(props) => props.theme.brand_purple};
+  }
+`;

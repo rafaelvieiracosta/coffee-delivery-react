@@ -12,11 +12,13 @@ import {
   ProductCardPriceText,
   ProductCardPriceNumber,
   ProductCardFastBuy,
-  ProductCardInput,
   ProductCardButton,
 } from "./styles";
 
+import { QuantityControl } from "../QuantityControl";
+
 import coffeeImageTest from "../../assets/img/coffees/americano.png";
+import { ShoppingCart } from "phosphor-react";
 
 export function ProductCard() {
   return (
@@ -49,8 +51,10 @@ export function ProductCard() {
           </ProductCardPrice>
 
           <ProductCardFastBuy>
-            <ProductCardInput />
-            <ProductCardButton>Adicionar ao carrinho</ProductCardButton>
+            <QuantityControl />
+            <ProductCardButton>
+              <ShoppingCart size={22} weight="fill" />
+            </ProductCardButton>
           </ProductCardFastBuy>
         </ProductCardFooter>
       </ProductCardWrapper>
