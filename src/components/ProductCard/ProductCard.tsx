@@ -17,37 +17,63 @@ import {
 
 import { QuantityControl } from "../QuantityControl";
 
-import coffeeImageTest from "../../assets/img/coffees/americano.png";
 import { ShoppingCart } from "phosphor-react";
 
-export function ProductCard() {
+interface PropsProductsCard {
+  coffee: {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    image: string;
+    tags: string[];
+  };
+}
+
+export function ProductCard({ coffee }: PropsProductsCard) {
+  function splitCurrencyParts(value: number) {
+    const number = Number(value);
+    const formatted = number.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      minimumFractionDigits: 2,
+    });
+
+    const [symbol, amount] = formatted.split(/\s(.+)/);
+
+    return {
+      symbol,
+      amount,
+    };
+  }
+  const { symbol, amount } = splitCurrencyParts(coffee.price);
+
   return (
     <ProductCardContainer>
       <ProductCardWrapper>
         <ProductCardHeader>
           <ProductCardImage
-            src={coffeeImageTest}
+            src={coffee.image}
             alt=""
             width={120}
             height={120}
           />
 
           <ProductCardTags>
-            <ProductCardTag>Tradicional</ProductCardTag>
-            <ProductCardTag>Com Leite</ProductCardTag>
+            {coffee.tags.map((tag) => {
+              return <ProductCardTag key={tag}>{tag}</ProductCardTag>;
+            })}
           </ProductCardTags>
 
-          <ProductCardName>Expresso Tradicional</ProductCardName>
+          <ProductCardName>{coffee.name}</ProductCardName>
 
-          <ProductCardDescription>
-            O tradicional café feito com água quente e grãos moídos
-          </ProductCardDescription>
+          <ProductCardDescription>{coffee.description}</ProductCardDescription>
         </ProductCardHeader>
 
         <ProductCardFooter>
           <ProductCardPrice>
-            <ProductCardPriceText>R$</ProductCardPriceText>
-            <ProductCardPriceNumber>9,90</ProductCardPriceNumber>
+            <ProductCardPriceText>{symbol}</ProductCardPriceText>
+            <ProductCardPriceNumber>{amount}</ProductCardPriceNumber>
           </ProductCardPrice>
 
           <ProductCardFastBuy>
