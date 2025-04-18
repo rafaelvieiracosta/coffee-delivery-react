@@ -1,13 +1,18 @@
 import { NavLink } from "react-router-dom";
 
-import { HeaderContent, CartButton, CartButtonNumber } from "./styles";
+import {
+  HeaderWrapper,
+  HeaderContent,
+  CartButton,
+  CartButtonNumber,
+} from "./styles";
 
 import { ShoppingCart } from "phosphor-react";
 import { IconLogo } from "../Icons/IconLogo";
 
 export function Header() {
   return (
-    <header>
+    <HeaderWrapper>
       <div className="row">
         <HeaderContent>
           <NavLink to="/">
@@ -23,6 +28,6 @@ export function Header() {
           </NavLink>
         </HeaderContent>
       </div>
-    </header>
+    </HeaderWrapper>
   );
 }

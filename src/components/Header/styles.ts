@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const HeaderWrapper = styled.header`
+  background: ${(props) => props.theme.base_white};
+  position: sticky;
+  top: 0;
+  z-index: 999;
+`;
+
 export const HeaderContent = styled.header`
   display: flex;
   align-items: center;
