@@ -1,17 +1,13 @@
+import { HomeContainer } from "./styles";
+
 import { HeroSection } from "./components/HeroSection";
-import { ProductCard } from "../../components/ProductCard/ProductCard";
+import { ShowcaseSection } from "./components/ShowcaseSection";
 
 export function Home() {
   return (
-    <main>
+    <HomeContainer>
       <HeroSection />
-
-      <div>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </div>
-    </main>
+      <ShowcaseSection />
+    </HomeContainer>
   );
 }
