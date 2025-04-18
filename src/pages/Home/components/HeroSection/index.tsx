@@ -12,15 +12,18 @@ import {
 
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 
-import imageHeroSection from "../../../../assets/img/image-hero-section-home.png";
-
 export function HeroSection() {
   return (
     <HeroSectionWrapper>
       <div className="row">
         <HeroContainer>
           <HeroImageWrapper>
-            <img src={imageHeroSection} alt="" width={476} height={360} />
+            <img
+              src="/img/image-hero-section-home.png"
+              alt=""
+              width={476}
+              height={360}
+            />
           </HeroImageWrapper>
 
           <HeroInformation>

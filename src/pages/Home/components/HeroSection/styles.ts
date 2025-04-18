@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const HeroSectionWrapper = styled.section`
   padding: 2rem 0;
+  background-image: url("/img/image-background-hero-section-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 
   @media (min-width: 768px) {
     padding: 5.75rem 0;
