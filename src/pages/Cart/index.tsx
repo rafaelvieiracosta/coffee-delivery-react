@@ -1,9 +1,21 @@
+import { CartContainer, CartWrapper, CartTitle } from "./styles";
+
+import { CartSummary } from "./components/CartSummary/CartSummary";
+
 export function Cart() {
   return (
-    <main>
+    <CartContainer>
       <div className="row">
-        <h1>Cart</h1>
+        <CartWrapper>
+          <div>
+            <CartTitle>Complete se pedido</CartTitle>
+          </div>
+          <div>
+            <CartTitle>Cafés selecionados</CartTitle>
+            <CartSummary />
+          </div>
+        </CartWrapper>
       </div>
-    </main>
+    </CartContainer>
   );
 }
