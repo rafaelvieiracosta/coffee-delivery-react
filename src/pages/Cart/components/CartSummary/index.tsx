@@ -8,7 +8,7 @@ import {
   CartSummaryListPrices,
   CartSummaryListPricesItem,
   CartSummaryListPricesItemEmphasis,
-} from ".";
+} from "./styles";
 
 export function CartSummary() {
   return (
